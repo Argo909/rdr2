@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Чек</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body style="background: url('backgroud.jpg') no-repeat center center fixed; background-size:380px 100vh;">
+
+  <!-- Форма ввода -->
+  <div class="input-form">
+      <input id="name" type="text" placeholder="Имя" />
+      <input id="number" type="text" placeholder="Номер" />
+      <input id="price" type="number" placeholder="Цена" />
+      <button id="submit">Создать</button>
+  </div>
+
+  <!-- Блок чека (скрыт изначально) -->
+  <div class="receipt" style="display:none;">
+      <div class="header">
+          <div class="bank-logo">
+              <img src="Изображение WhatsApp 2025-03-14 в 18.28.34_778846da.jpg" alt="Mbank Logo" />
+          </div>
+          <div class="close-icon">✖</div>
+      </div>
+
+      <div class="success-icon">
+          <img src="Изображение WhatsApp 2025-03-13 в 18.28.38_1d8a9fab.jpg" alt="Success Icon" />
+      </div>
+      <div class="success-text">Транзакция успешно проведена</div>
+      
+      <div class="amount">- 100.00 С</div>
+      <div class="desc">Перевод по номеру телефона QR</div>
+      
+      <div class="details">
+          <p id="recipient-name"><strong>Имя получателя:</strong> Калбы А.</p>
+          <p><strong>Оплачено со счета:</strong> 1033820209686242</p>
+          <p id="transaction-date"><strong>Дата операции:</strong> 10.02.2025, 09:44</p>
+          <p><strong>Номер квитанции:</strong> P021303501656</p>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="transfer-info">
+          Перевод по номеру телефона: 996705763800 /<br />
+          Калбы А. / Сумма 100.00 KGS
+      </div>
+  </div>
+
+  <!-- Кнопка "Скачать чек" (скрыта по умолчанию) -->
+  <button id="download-receipt" style="display:none; margin-top: 20px; padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Скачать чек
+  </button>
+
+  <div class="actions">
+    <div class="action">
+        <img src="ыв.jpg" alt="Отправить"/>
+        <p>Отправить</p>
+    </div>
+    <div class="action">
+        <img src="изп.jpg" alt="Повторить платеж"/>
+        <p>Повторить<br>
+             платеж</p>
+    </div>
+    <div class="action">
+        <img src="изр.jpg" alt="Создать Шаблон"/>
+        <p>Создать<br>
+             Шаблон</p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
